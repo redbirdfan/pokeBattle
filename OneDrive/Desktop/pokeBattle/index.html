@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="pokeBattle.css">
+  <title>PokeDome</title>
+</head>
+<body>
+  <h1 class="titleStyling">Max's PokeDome</h1>
+
+  <div class="vsSize">
+    <select name="pokemonOne" id="pokemonOne">
+      <option value=''>Select Pokemon</option>
+    </select>  
+    
+
+    <img src="https://www.pngall.com/wp-content/uploads/5/Versus-PNG-Image-HD.png" alt="vs Image" width="200" height="200">
+ 
+    
+    <select name="pokemonTwo" id="pokemonTwo">
+      <option value=''>Select Pokemon</option>
+    </select>
+
+  </div>
+
+  <div class="vsSize">
+    <button type="button" id="writeBattleButton" name="writeBattleButton">
+      <img src="https://static.vecteezy.com/system/resources/previews/001/928/830/large_2x/fight-text-on-comic-cloud-explosion-isolated-on-white-background-free-vector.jpg" alt="fight logo" height="200" width="400" style="padding:-800px" border:"0px">
+    </button>
+  </div>
+
+  <div id="battleResult"></div>
+
+  <script type="module" src="pokeBattle.js"></script>
+  
+  <div id="battleModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 >Poke-Clash</h2>
+        <div id="battleDescriptionContent">
+            </div>
+    </div>
+</div>
+</body>
+</html>

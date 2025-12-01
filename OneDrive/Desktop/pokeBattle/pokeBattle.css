@@ -1,0 +1,50 @@
+.titleStyling {
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: initial;
+    text-align: center;
+    color:red;
+    scroll-behavior: smooth;
+}
+
+.vsSize {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 0px 60px 0px 30px;
+    size: 15px 15px 15px 15px;
+}
+
+/* Modal Background Overlay */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* Enable scroll if needed */
+    
+    /* --- NEW IMAGE BACKGROUND PROPERTIES --- */
+    background-image: url('https://as2.ftcdn.net/v2/jpg/05/37/82/85/1000_F_537828583_hpeQo9A1jXMSzD9O6e9SoHrs2Y9bwYKK.jpg'); /* <--- Replace with your image path */
+    background-size: auto; /* Ensures thepath/to/your/background-image.jpg image covers the entire modal area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from tiling */
+    background-attachment: fixed; /* Keeps image fixed when scrolling modal content */
+    /* Optional: Add a slight dark overlay ON TOP of the image for readability */
+   
+
+/* Modal Content Box */
+.modal-content {
+   
+    margin: 20%;
+   font-size: 80%;
+    background-image: url('path/to/your/content-box-image.png');
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black; 
+}
+
+/* You might want to keep a subtle overlay for the .modal background here too */
