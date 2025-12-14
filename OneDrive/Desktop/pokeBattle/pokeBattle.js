@@ -15,6 +15,7 @@ window.addEventListener('click', (event) => {
 });
 
 async function makeApiRequest(pokemonOne, pokemonTwo) {
+    
     const response = await fetch('http://localhost:5000/api/battle', {
         method: 'POST',
         headers: {

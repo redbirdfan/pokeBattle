@@ -17,9 +17,9 @@
 
 
 .modal {
-    display: none;
+    display: 0;
     position: fixed; 
-    z-index: 1000; 
+    z-index: 100; 
     left: 0;
     top: 0;
     width: 100%; 
@@ -28,16 +28,30 @@
     background-size: auto; 
     background-position: center; 
     background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    
+    background-attachment: scroll; 
+}
+
 .modal-content {
-   
-    margin: 20%;
-   font-size: 80%;
+    margin-left: 22%;
+    margin-right: 22%;
+    margin-bottom: 10%;
+    font-size: 80%;
+    flex: center;
     background-image: url('path/to/your/content-box-image.png');
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
     color: black; 
+    
+}
+
+.battle-content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 

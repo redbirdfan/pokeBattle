@@ -13,10 +13,12 @@ const ai = new GoogleGenAI({apiKey: process.env.GEMINI_API_KEY});
 
 console.log("Is the key defined?", !!process.env.GEMINI_API_KEY);
 
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: 'http://localhost:3000', 
+                methods: ['GET', 'POST'] }));
 app.use(express.json()); 
 
 app.post('/api/battle', async (req, res) => {
+    console.log("Api battle being requested from front end.")
    
     const { pokemonOne, pokemonTwo } = req.body; 
 
@@ -32,7 +34,7 @@ app.post('/api/battle', async (req, res) => {
             model: 'gemini-2.5-flash',
             contents: prompt,
             config: {
-                systemInstruction: 'Be a rich story teller that generates a Pokémon battle.',
+                systemInstruction: 'Be a rich story teller that generates a Pokémon battle using character mmoves.',
                 temperature: 0.9,
             },
         });
