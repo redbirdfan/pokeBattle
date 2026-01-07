@@ -56,7 +56,7 @@ writeBattleButton.addEventListener('click', async () => {
 
     } catch (error) {
         console.error("Gemini request error:", error);
-        document.getElementById('battleResult').textContent = "Error generating battle. Check the console for details.";
+        document.getElementById('battleResult').textContent = "Error generating battle";
     } finally {
         writeBattleButton.disable = false;
     }
