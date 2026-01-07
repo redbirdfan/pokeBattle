@@ -1,7 +1,5 @@
-
 require('dotenv').config(); 
 
-// 2. Import core packages
 const express = require('express');
 const cors = require('cors');
 const { GoogleGenAI } = require('@google/genai'); 
@@ -34,7 +32,7 @@ app.post('/api/battle', async (req, res) => {
             model: 'gemini-2.5-flash',
             contents: prompt,
             config: {
-                systemInstruction: 'Be a rich story teller that generates a Pokémon battle using character mmoves.',
+                systemInstruction: 'Be a rich story teller that generates a Pokémon battle using character moves.',
                 temperature: 0.9,
             },
         });
@@ -44,7 +42,7 @@ app.post('/api/battle', async (req, res) => {
 
     } catch (error) {
         console.error("Gemini API Error:", error);
-        res.status(500).json({ error: 'Failed to generate battle description.' });
+        res.status(500).json({ error: 'Failed to generate battle.' });
     }
 });
 
